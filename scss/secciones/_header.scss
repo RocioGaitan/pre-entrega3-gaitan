@@ -1,0 +1,60 @@
+//import
+@import "../base/variables";
+@import "../base/mixin";
+@import "../base/extend";
+
+//estilos del header de todos los html
+
+/* estilos header */
+
+body{
+    background-color: $color-principal;
+}
+
+.header-fondo{
+    @include medidas(100%, 100%);
+}
+
+header nav div ul{
+    display: flex;
+    margin-top: 3rem;
+    gap: 1rem;
+    
+
+ li{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    margin-top: 3rem;
+    margin-left: 1rem;
+    border-right: 1px solid #d8c4b3;
+    background-color: $color-secundario;
+
+ }
+
+
+}
+
+
+header h1{
+   height: auto;
+   width: auto;
+   justify-content: center;
+   text-align: center;
+   font-size: 3rem;
+   font-weight: bold;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+
+.logo-img{
+    margin-top: -2rem;
+    padding: 2rem;
+}
+
+
+
+
+
+
+    

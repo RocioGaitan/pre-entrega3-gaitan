@@ -1,0 +1,14 @@
+//mixin
+
+@mixin medidas($ancho, $alto){
+    width: auto;
+    height: auto;
+}
+
+@mixin h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+    
+}

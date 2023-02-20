@@ -1,0 +1,27 @@
+// extend
+
+%margen {
+    margin-top: 6rem;
+    margin-bottom: 1.8rem;
+}
+
+
+%direccion {
+    text-align: center;
+    margin-top: 2rem;
+    background-color: rgb(243, 243, 243);
+}
+
+%mapas {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+%etiquet-a{
+    text-decoration: none;
+    color: #000000;
+}
+
+

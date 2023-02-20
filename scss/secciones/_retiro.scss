@@ -1,0 +1,113 @@
+//import carpeta base 
+
+@import "../base/mixin";
+@import "../base/extend";
+@import "../base/variables";
+
+
+/* estilos de PUNTOS-RETIRO.HTML*/
+
+/* estilos header */
+
+.etiqueta-a{
+    @extend %etiquet-a;
+}
+
+/* estilos del main */
+
+.h2{
+   color: $color-secundario;
+    @include h2;
+}
+
+.h2-retiro{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    @include h2;
+}
+
+
+.padre-retiro{
+    display: flex;
+    flex-direction: column;
+    @include h2;
+    
+}
+
+.mapa-uno{
+    display: flex;
+    flex-direction: column;
+    background-color: $color-secundario;
+    
+
+ .direcciones{
+  @extend %direccion; 
+ }
+
+ .mapa-a{
+  @extend %mapas;
+   
+ }
+
+}
+
+
+.mapa-dos{
+    display: flex;
+    flex-direction: column;
+    background-color: $color-secundario;
+
+
+ .direcciones{
+    @extend %direccion;
+ }
+
+ .mapa-b{
+    @extend %mapas;
+   
+ }
+
+}
+
+
+.h3-retiro{
+    color: rgb(192, 192, 192);
+}
+
+//media queries
+
+/* mq para la pantalla de tablet 600px - PUNTOS-RETIRO.HTML*/
+
+@media screen and(min-width:600px){
+    
+ /*estilos footer*/
+
+ .color-retiro{
+ background-color: #d6cfc9;
+ margin-left: 1rem;
+
+ }
+
+ .mapa-a{
+    width: 100%;
+}
+.mapa-b{
+    width: 100%;
+}
+    
+}
+
+
+/* mq para la pantalla desktop 1024px - PUNTOS-RETIRO.HTML */
+
+@media screen and(min-width:1024px){
+
+    .mapa-a{
+        width: 100%;
+    }
+    .mapa-b{
+        width: 100%;
+    }
+    
+}

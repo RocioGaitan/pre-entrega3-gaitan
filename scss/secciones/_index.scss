@@ -1,0 +1,142 @@
+// import carpeta base
+@import "../base/mixin";
+@import "../base/extend";
+@import "../base/variables";
+
+
+
+/* estilos INDEX.HTML */
+
+/*estilos header*/
+
+.etiqueta-a{
+    @extend %etiquet-a;
+}
+
+.fondo img{
+   width: $medida-img;
+}
+
+/* estilos main */
+
+section h2{
+    height: 5rem;
+    color: #1d2127;
+    background-color: $color-secundario;
+    padding: 1rem;
+    @include h2;
+}
+
+//nesting 
+
+.padre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+
+ .texto{
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+ }
+
+ .button{
+    margin-bottom: 2rem;
+    text-align: center;
+    background-color: $color-secundario;
+ }
+
+
+}
+
+/* estilos del footer */
+
+footer{
+    text-align: center;
+}
+
+h3{
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-decoration: underline;
+    @extend %margen;
+}
+
+h4{
+    @extend %margen;
+    font-family: $letra;
+
+}
+
+//media queries
+
+/*mq pantalla para tablet 600px - index.html*/
+
+@media screen and(min-width:600px){
+
+    /*estilo header*/
+    
+    h1{
+        background-color: $color-mq;
+        margin-left: 4rem;
+        
+    }
+
+    /*estilos main*/
+
+    .padre{
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 6rem;
+    }
+
+    
+
+    /* estilos del footer */
+
+    footer{
+        background-color: $color-secundario;
+    }
+   
+}
+
+
+/*mq pantalla desktop 1024px - index.html*/
+
+@media screen and(min-width:1024px){
+
+    
+    
+    //nesting
+    /* estilos main */
+    .padre{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        
+
+        .dos-filas{
+            display: grid;
+            grid-template-columns: repeat(1fr, 1fr);
+        }
+
+        .img{
+          display: flex;
+          justify-content: center;
+        
+        }
+    }
+    
+}
+
+/* estilos footer */
+
+.h3{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+

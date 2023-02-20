@@ -1,0 +1,68 @@
+// import carpeta base
+
+@import "../base/extend";
+@import "../base/variables";
+@import "../base/mixin";
+
+
+/* estilos de CONTACTO.HTML */
+
+/* estilos main */
+
+.etiqueta-a{
+    @extend %etiquet-a;
+}
+
+.formulario-contacto{
+    color: #a06e23;
+    margin: 1rem 1rem 1rem 1rem;
+    text-align: center;
+    font-family: $letra;
+}
+.contacto{
+    background-color: $color-secundario;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-left: 0.5rem;
+   
+}
+
+.separar{
+    margin-top: 2rem;
+}
+
+// medias queries
+
+/* mq pantalla para tablet 600px - contacto.html */
+
+@media screen and(min-width:600px){
+    
+
+
+    .contacto{
+        background-color: #bd9370;
+    }
+    
+}
+
+
+/* mq pantalla para desktop 1024px - contacto.html */
+
+@media screen and(min-width:1024px){
+
+
+     .titulo-contacto{
+            margin-top: 10rem;
+        }
+      
+
+      .formulario-contacto{
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+      }
+
+    }
+

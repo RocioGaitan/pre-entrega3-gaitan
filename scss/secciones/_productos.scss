@@ -1,0 +1,83 @@
+//import carpeta base
+
+@import "../base/mixin";
+@import "../base/extend";
+@import "../base/variables";
+
+/*estilos de PRODUCTOS.HTML*/
+
+/*estilos header*/
+
+.etiqueta-a{
+    @extend %etiquet-a;
+}
+
+/*estilos main*/
+h2{
+    @include h2;
+    margin-bottom: 3rem;
+}
+
+.padre-productos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texto{
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: $letra;
+    
+
+}
+
+.button{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/*estilos footer*/
+
+h3{
+    color: #853f23;
+}
+
+//media queries
+
+/* mq pantalla de tablet 600px - PRODUCTOS.HTML*/
+
+@media screen and(min-width:600px){
+    
+    .button:hover{
+        transform: scale(1.1);
+      background-color: #d8c4b3;
+    }
+    .padre-productos{
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 6rem;
+    }
+
+}
+
+/* mq pantalla desktop 1024px - PRODUCTO.HTML*/
+
+@media screen and(min-width:1024px){
+
+    .padre-productos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+    
+    .hijo-productos:hover{
+        transform: scale(1.0);
+        background-color: #f3e8e4;
+        
+    }
+ 
+    
+}
